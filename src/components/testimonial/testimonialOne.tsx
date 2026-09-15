@@ -61,7 +61,11 @@ const TestimonialOne = () => {
               data-delay='0.1'
               data-wow-duration='2500ms'>
               <div className='testimonial-image'>
-                <img src='/img/home-1/testimonial/01.jpg' alt='img' />
+                {/* <img src='/img/home-1/testimonial/01.jpg' alt='img' /> */}
+                <img
+                  src='/imgs/WhatsApp Image 2026-09-10 at 12.59.58 PM (1).jpeg'
+                  alt='img'
+                />
                 <div className='shape'>
                   <img src='/img/home-1/testimonial/shape.png' alt='img' />
                 </div>

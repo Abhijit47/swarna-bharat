@@ -74,7 +74,8 @@ const AboutOne = () => {
               <div className='about-item'>
                 <div className='about-image'>
                   <motion.img
-                    src='/img/home-1/about/about-3.jpg'
+                    // src='/img/home-1/about/about-3.jpg'
+                    src='/imgs/WhatsApp Image 2026-09-10 at 12.55.41 PM.jpeg'
                     alt='img'
                     className='wow img-custom-anim-right'
                     initial={{
@@ -98,7 +99,8 @@ const AboutOne = () => {
                   </div>
                   <div className='about-image-2'>
                     <motion.img
-                      src='/img/home-1/about/about-1.jpg'
+                      // src='/img/home-1/about/about-1.jpg'
+                      src='/imgs/WhatsApp Image 2026-09-10 at 12.59.58 PM.jpeg'
                       alt='img'
                       className='wow img-custom-anim-left'
                       initial={{
@@ -120,7 +122,8 @@ const AboutOne = () => {
                   </div>
                   <div className='about-image-3'>
                     <motion.img
-                      src='/img/home-1/about/about-2.png'
+                      // src='/img/home-1/about/about-2.png'
+                      src='/imgs/WhatsApp Image 2026-07-30 at 10.08.23 PM (1).jpeg'
                       alt='img'
                       className='wow img-custom-anim-left'
                       initial={{

@@ -3,42 +3,140 @@ import Marquee from 'react-fast-marquee';
 
 const projectSlides = [
   {
-    image: '/img/home-1/project/01.jpg',
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.17 PM.jpeg',
     title: 'Child Educations',
     subtitle: 'Charity & Funding',
     shape: '/img/home-1/project/shape.png',
     contentClass: '',
   },
   {
-    image: '/img/home-1/project/02.jpg',
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.17 PM (1).jpeg',
     title: 'Child Educations',
     subtitle: 'Charity & Funding',
     shape: '/img/home-1/project/shape.png',
     contentClass: '',
   },
   {
-    image: '/img/home-1/project/03.jpg',
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.17 PM (2).jpeg',
     title: 'Child Educations',
     subtitle: 'Charity & Funding',
     shape: '/img/home-1/project/shape.png',
     contentClass: '',
   },
   {
-    image: '/img/home-1/project/01.jpg',
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.18 PM.jpeg',
     title: 'Child Educations',
     subtitle: 'Charity & Funding',
     shape: '/img/home-1/project/shape.png',
     contentClass: '',
   },
   {
-    image: '/img/home-1/project/02.jpg',
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.19 PM (1).jpeg',
     title: 'Child Educations',
     subtitle: 'Charity & Funding',
     shape: '/img/home-1/project/shape.png',
     contentClass: '',
   },
   {
-    image: '/img/home-1/project/03.jpg',
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.19 PM.jpeg',
+    title: 'Child Educations',
+    subtitle: 'Charity & Funding',
+    shape: '/img/home-1/project/shape.png',
+    contentClass: '',
+  },
+  {
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.20 PM (2).jpeg',
+    title: 'Child Educations',
+    subtitle: 'Charity & Funding',
+    shape: '/img/home-1/project/shape.png',
+    contentClass: '',
+  },
+  {
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.20 PM.jpeg',
+    title: 'Child Educations',
+    subtitle: 'Charity & Funding',
+    shape: '/img/home-1/project/shape.png',
+    contentClass: '',
+  },
+  {
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.21 PM (1).jpeg',
+    title: 'Child Educations',
+    subtitle: 'Charity & Funding',
+    shape: '/img/home-1/project/shape.png',
+    contentClass: '',
+  },
+  {
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.21 PM.jpeg',
+    title: 'Child Educations',
+    subtitle: 'Charity & Funding',
+    shape: '/img/home-1/project/shape.png',
+    contentClass: '',
+  },
+  {
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.22 PM (2).jpeg',
+    title: 'Child Educations',
+    subtitle: 'Charity & Funding',
+    shape: '/img/home-1/project/shape.png',
+    contentClass: '',
+  },
+  {
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.22 PM.jpeg',
+    title: 'Child Educations',
+    subtitle: 'Charity & Funding',
+    shape: '/img/home-1/project/shape.png',
+    contentClass: '',
+  },
+  {
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.23 PM (1).jpeg',
+    title: 'Child Educations',
+    subtitle: 'Charity & Funding',
+    shape: '/img/home-1/project/shape.png',
+    contentClass: '',
+  },
+  {
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.23 PM (2).jpeg',
+    title: 'Child Educations',
+    subtitle: 'Charity & Funding',
+    shape: '/img/home-1/project/shape.png',
+    contentClass: '',
+  },
+  {
+    image: '/imgs/WhatsApp Image 2026-07-30 at 10.08.23 PM.jpeg',
+    title: 'Child Educations',
+    subtitle: 'Charity & Funding',
+    shape: '/img/home-1/project/shape.png',
+    contentClass: '',
+  },
+  {
+    image: '/imgs/WhatsApp Image 2026-09-10 at 12.49.54 PM.jpeg',
+    title: 'Child Educations',
+    subtitle: 'Charity & Funding',
+    shape: '/img/home-1/project/shape.png',
+    contentClass: '',
+  },
+  {
+    image: '/imgs/WhatsApp Image 2026-09-10 at 12.59.58 PM (2).jpeg',
+    title: 'Child Educations',
+    subtitle: 'Charity & Funding',
+    shape: '/img/home-1/project/shape.png',
+    contentClass: '',
+  },
+  {
+    image: '/imgs/WhatsApp Image 2026-09-10 at 12.59.58 PM.jpeg',
+    title: 'Child Educations',
+    subtitle: 'Charity & Funding',
+    shape: '/img/home-1/project/shape.png',
+    contentClass: '',
+  },
+  {
+    image: '/imgs/WhatsApp Image 2026-09-10 at 12.59.59 PM (1).jpeg',
+    title: 'Child Educations',
+    subtitle: 'Charity & Funding',
+    shape: '/img/home-1/project/shape.png',
+    contentClass: '',
+  },
+  {
+    image: '/imgs/WhatsApp Image 2026-09-10 at 12.59.59 PM (2).jpeg',
     title: 'Child Educations',
     subtitle: 'Charity & Funding',
     shape: '/img/home-1/project/shape.png',
@@ -63,7 +161,13 @@ const ProjectsSlider = () => {
             <div className='brand-slide-element'>
               <div className='project-card-item'>
                 <div className='project-image'>
-                  <img src={slide.image} alt='img' />
+                  <img
+                    src={slide.image}
+                    alt='img'
+                    width={'100%'}
+                    height={'100%'}
+                    style={{ aspectRatio: 16 / 9 }}
+                  />
                   {/* <div className="shape-image">
                     <img src={slide.shape} alt="img" />
                   </div> */}
@@ -90,7 +194,14 @@ const ProjectsSlider = () => {
             <div className='brand-slide-element'>
               <div className='project-card-item'>
                 <div className='project-image'>
-                  <img src={slide.image} alt='img' />
+                  <img
+                    src={slide.image}
+                    alt='img'
+                    width={'100%'}
+                    height={'100%'}
+                    className='object-fit-cover'
+                    style={{ aspectRatio: 16 / 9 }}
+                  />
                   {/* <div className='shape-image'>
                     <img src={slide.shape} alt='img' />
                   </div> */}

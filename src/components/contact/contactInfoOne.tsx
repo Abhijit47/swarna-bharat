@@ -19,7 +19,14 @@ const ContactInfoOne = () => {
                   delay: 0.3,
                 }}
                 viewport={{ once: false, amount: 0.2 }}>
-                <img src='/img/home-1/contact.jpg' alt='img' />
+                {/* <img src='/img/home-1/contact.jpg' alt='img' /> */}
+                <img
+                  src='/imgs/WhatsApp Image 2026-09-10 at 12.59.59 PM (1).jpeg'
+                  alt='img'
+                  width={'100%'}
+                  height={'100%'}
+                  style={{ aspectRatio: 2 / 1.5 }}
+                />
               </motion.div>
             </div>
             <div className='col-lg-6'>
