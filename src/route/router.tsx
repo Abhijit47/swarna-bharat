@@ -25,8 +25,8 @@ import Project from '@/pages/project';
 import ProjectDetails from '@/pages/project-details';
 import Volounteer from '@/pages/volounteer';
 import VolounteerDetails from '@/pages/volounteer-details';
-import { allProjects } from 'content-collections';
-import { createBrowserRouter, redirect } from 'react-router-dom';
+// import { allProjects } from 'content-collections';
+import { createBrowserRouter } from 'react-router-dom';
 
 export const router = createBrowserRouter([
   {
@@ -79,20 +79,20 @@ export const router = createBrowserRouter([
       {
         path: '/project-details/:path',
         element: <ProjectDetails />,
-        loader: async ({ params }) => {
-          // console.log('params', params.path);
-          const path = params.path;
-          if (!path) {
-            throw redirect('/');
-          }
-          const project = allProjects.find(
-            (project) => project._meta.path === path,
-          ) as any;
-          if (!project) {
-            throw redirect('/');
-          }
-          return project as any;
-        },
+        // loader: async ({ params }) => {
+        //   // console.log('params', params.path);
+        //   const path = params.path;
+        //   if (!path) {
+        //     throw redirect('/');
+        //   }
+        //   const project = allProjects.find(
+        //     (project) => project._meta.path === path,
+        //   );
+        //   if (!project) {
+        //     throw redirect('/');
+        //   }
+        //   return project;
+        // },
       },
       {
         path: '/become-volounteer',

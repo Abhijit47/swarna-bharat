@@ -1,18 +1,45 @@
 // import CommentArea from "./commentArea";
 
-import { useLoaderData } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import { MDXContent } from '@content-collections/mdx/react';
+import { allProjects } from 'content-collections';
 
 const ProjectDetailsPost = () => {
-  const data = useLoaderData<{
-    mdx: string;
-    readTime: number;
-    title: string;
-    summary: string;
-    content: string;
-    draft: boolean;
-  }>();
+  const { pathname } = useLocation();
+
+  const navigate = useNavigate();
+
+  const projectPath = pathname.replace('/project-details/', '');
+  // console.log('projectPath', projectPath);
+
+  const project = allProjects.find(
+    (project) => project._meta.path === projectPath,
+  );
+
+  if (!project) {
+    return (
+      <div className='container'>
+        <h1>Project not found</h1>
+        <button
+          className='theme-btn'
+          onClick={() => {
+            navigate(-1);
+          }}>
+          Go Back
+        </button>
+      </div>
+    );
+  }
+
+  // const data = useLoaderData<{
+  //   mdx: string;
+  //   readTime: number;
+  //   title: string;
+  //   summary: string;
+  //   content: string;
+  //   draft: boolean;
+  // }>();
 
   // console.log('ProjectDetailsPost data:::', data.title);
 
@@ -24,7 +51,7 @@ const ProjectDetailsPost = () => {
         </div>
 
         <div className='details-content'>
-          <MDXContent code={data.mdx} />
+          <MDXContent code={project.mdx} />
         </div>
       </div>
     </>
