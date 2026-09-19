@@ -5,7 +5,8 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-const serviceSlides = [
+// eslint-disable-next-line
+export const serviceSlides = [
   {
     icon: '/img/home-1/icon/03.svg',
     title: 'Project Hope — Fulfilling Dreams, Supporting Life',
