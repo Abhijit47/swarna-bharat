@@ -87,11 +87,11 @@ export const router = createBrowserRouter([
           }
           const project = allProjects.find(
             (project) => project._meta.path === path,
-          );
+          ) as any;
           if (!project) {
             throw redirect('/');
           }
-          return project;
+          return project as any;
         },
       },
       {
