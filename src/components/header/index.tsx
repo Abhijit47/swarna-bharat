@@ -2,7 +2,7 @@ import { menuData } from '@/data/menuData';
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import MobileMenu from './mobile-menu';
-import SearchPopup from './search-popup';
+// import SearchPopup from './search-popup';
 
 const Header = ({ className, logo }: { className?: string; logo?: string }) => {
   const [isSearchActive, setIsSearchActive] = useState(false);
@@ -168,7 +168,7 @@ const Header = ({ className, logo }: { className?: string; logo?: string }) => {
         </div>
       </header>
 
-      <SearchPopup isActive={isSearchActive} setIsActive={setIsSearchActive} />
+      {/* <SearchPopup isActive={isSearchActive} setIsActive={setIsSearchActive} /> */}
     </>
   );
 };

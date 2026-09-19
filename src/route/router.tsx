@@ -1,141 +1,165 @@
-import InnerLayout from "@/layout/innerLayout";
-import LayoutThree from "@/layout/layoutThree";
-import LayoutTwo from "@/layout/layoutTwo";
-import RootLayout from "@/layout/root";
-import Error from "@/pages/404";
-import About from "@/pages/about";
-import BecomeVolounteer from "@/pages/become-volounteer";
-import Contact from "@/pages/contact";
-import Donation from "@/pages/donation";
-import DonationDetails from "@/pages/donation-details";
-import DonationNow from "@/pages/donation-now";
-import Event from "@/pages/event";
-import EventDetails from "@/pages/event-details";
-import EventList from "@/pages/event-list";
-import Faq from "@/pages/faq";
-import Home from "@/pages/home";
-import HomeThree from "@/pages/homeThree";
-import HomeTwo from "@/pages/homeTwo";
-import NewsDetails from "@/pages/news-details";
-import NewsGrid from "@/pages/news-grid";
-import News from "@/pages/news/page";
-import Pricing from "@/pages/pricing";
-import Project from "@/pages/project";
-import ProjectDetails from "@/pages/project-details";
-import Volounteer from "@/pages/volounteer";
-import VolounteerDetails from "@/pages/volounteer-details";
-import { createBrowserRouter } from "react-router-dom";
+import InnerLayout from '@/layout/innerLayout';
+import LayoutThree from '@/layout/layoutThree';
+import LayoutTwo from '@/layout/layoutTwo';
+import RootLayout from '@/layout/root';
+import Error from '@/pages/404';
+import About from '@/pages/about';
+import BecomeVolounteer from '@/pages/become-volounteer';
+import Contact from '@/pages/contact';
+import Donation from '@/pages/donation';
+import DonationDetails from '@/pages/donation-details';
+import DonationNow from '@/pages/donation-now';
+import Event from '@/pages/event';
+import EventDetails from '@/pages/event-details';
+import EventList from '@/pages/event-list';
+import Faq from '@/pages/faq';
+import GalleryPage from '@/pages/gallery';
+import Home from '@/pages/home';
+import HomeThree from '@/pages/homeThree';
+import HomeTwo from '@/pages/homeTwo';
+import NewsDetails from '@/pages/news-details';
+import NewsGrid from '@/pages/news-grid';
+import News from '@/pages/news/page';
+import Pricing from '@/pages/pricing';
+import Project from '@/pages/project';
+import ProjectDetails from '@/pages/project-details';
+import Volounteer from '@/pages/volounteer';
+import VolounteerDetails from '@/pages/volounteer-details';
+import { allProjects } from 'content-collections';
+import { createBrowserRouter, redirect } from 'react-router-dom';
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <RootLayout />,
     errorElement: <Error />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Home />,
       },
     ],
   },
   {
-    path: "/home-2",
+    path: '/home-2',
     element: <LayoutTwo />,
     children: [
       {
-        path: "/home-2",
+        path: '/home-2',
         element: <HomeTwo />,
       },
     ],
   },
   {
-    path: "/home-3",
+    path: '/home-3',
     element: <LayoutThree />,
     children: [
       {
-        path: "/home-3",
+        path: '/home-3',
         element: <HomeThree />,
       },
     ],
   },
   {
-    path: "/",
+    path: '/',
     element: <InnerLayout />,
     children: [
       {
-        path: "/about",
+        path: '/about',
         element: <About />,
       },
       {
-        path: "/project",
+        path: '/project',
         element: <Project />,
       },
+      // {
+      //   path: '/project-details',
+      //   element: <ProjectDetails />,
+      // },
       {
-        path: "/project-details",
+        path: '/project-details/:path',
         element: <ProjectDetails />,
+        loader: async ({ params }) => {
+          // console.log('params', params.path);
+          const path = params.path;
+          if (!path) {
+            throw redirect('/');
+          }
+          const project = allProjects.find(
+            (project) => project._meta.path === path,
+          );
+          if (!project) {
+            throw redirect('/');
+          }
+          return project;
+        },
       },
       {
-        path: "/become-volounteer",
+        path: '/become-volounteer',
         element: <BecomeVolounteer />,
       },
       {
-        path: "/volounteer",
+        path: '/volounteer',
         element: <Volounteer />,
       },
       {
-        path: "/volounteer-details",
+        path: '/volounteer-details',
         element: <VolounteerDetails />,
       },
       {
-        path: "/event",
+        path: '/event',
         element: <Event />,
       },
       {
-        path: "/event-details",
+        path: '/gallery',
+        element: <GalleryPage />,
+      },
+      {
+        path: '/event-details',
         element: <EventDetails />,
       },
       {
-        path: "/event-list",
+        path: '/event-list',
         element: <EventList />,
       },
       {
-        path: "/donation",
+        path: '/donation',
         element: <Donation />,
       },
       {
-        path: "/donation-now",
+        path: '/donation-now',
         element: <DonationNow />,
       },
       {
-        path: "/donation-details",
+        path: '/donation-details',
         element: <DonationDetails />,
       },
       {
-        path: "/pricing",
+        path: '/pricing',
         element: <Pricing />,
       },
       {
-        path: "/faq",
+        path: '/faq',
         element: <Faq />,
       },
       {
-        path: "/404",
+        path: '/404',
         element: <Error />,
       },
       {
-        path: "/news-grid",
+        path: '/news-grid',
         element: <NewsGrid />,
       },
       {
-        path: "/news",
+        path: '/news',
         element: <News />,
       },
       {
-        path: "/news-details",
+        path: '/news-details',
         element: <NewsDetails />,
       },
       {
-        path: "/contact",
+        path: '/contact',
         element: <Contact />,
       },
     ],

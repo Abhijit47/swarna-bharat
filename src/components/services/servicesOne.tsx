@@ -1,3 +1,4 @@
+import { allProjects } from 'content-collections';
 import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -99,7 +100,7 @@ const ServicesOne = () => {
           }}
           modules={[Pagination, Autoplay]}
           className='service-slider'>
-          {serviceSlides.map((slide, idx) => (
+          {/* {serviceSlides.map((slide, idx) => (
             <SwiperSlide key={idx}>
               <div className='causes-box-item'>
                 <div className='icon'>
@@ -111,6 +112,31 @@ const ServicesOne = () => {
                   </h3>
                   <p>{slide.description}</p>
                   <Link to={'/project-details'} className='theme-btn'>
+                    Learn More <i className='fa-solid fa-arrow-right-long' />
+                  </Link>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))} */}
+
+          {allProjects.map((project) => (
+            <SwiperSlide key={project._meta.path}>
+              <div className='causes-box-item'>
+                <div className='icon'>
+                  {/* <img src={slide.icon} alt='img' /> */}
+                </div>
+                <div className='content'>
+                  <h3>
+                    <Link to={`/project-details/${project._meta.path}`}>
+                      {project.title.length > 20
+                        ? project.title.trim().substring(0, 20) + '...'
+                        : project.title.trim()}
+                    </Link>
+                  </h3>
+                  <p>{project.summary}</p>
+                  <Link
+                    to={`/project-details/${project._meta.path}`}
+                    className='theme-btn'>
                     Learn More <i className='fa-solid fa-arrow-right-long' />
                   </Link>
                 </div>
