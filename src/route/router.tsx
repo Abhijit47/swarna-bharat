@@ -4,6 +4,7 @@ import LayoutTwo from '@/layout/layoutTwo';
 import RootLayout from '@/layout/root';
 import Error from '@/pages/404';
 import About from '@/pages/about';
+import AwardsPage from '@/pages/awards';
 import BecomeVolounteer from '@/pages/become-volounteer';
 import Contact from '@/pages/contact';
 import Donation from '@/pages/donation';
@@ -23,6 +24,8 @@ import News from '@/pages/news/page';
 import Pricing from '@/pages/pricing';
 import Project from '@/pages/project';
 import ProjectDetails from '@/pages/project-details';
+import ServicesPage from '@/pages/services';
+import VisionAndMissionPage from '@/pages/vision-and-mission';
 import Volounteer from '@/pages/volounteer';
 import VolounteerDetails from '@/pages/volounteer-details';
 import { allProjects } from 'content-collections';
@@ -37,6 +40,44 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/about',
+        element: <About />,
+      },
+      {
+        path: '/gallery',
+        element: <GalleryPage />,
+      },
+      {
+        path: '/project-details/:path',
+        element: <ProjectDetails />,
+        loader: async ({ params }) => {
+          // console.log('params', params.path);
+          const path = params.path;
+          if (!path) {
+            throw redirect('/');
+          }
+          const project = allProjects.find(
+            (project) => project._meta.path === path,
+          );
+          if (!project) {
+            throw redirect('/');
+          }
+          return project;
+        },
+      },
+      {
+        path: '/vision-and-mission',
+        element: <VisionAndMissionPage />,
+      },
+      {
+        path: '/awards',
+        element: <AwardsPage />,
+      },
+      {
+        path: '/services',
+        element: <ServicesPage />,
       },
     ],
   },
@@ -64,10 +105,10 @@ export const router = createBrowserRouter([
     path: '/',
     element: <InnerLayout />,
     children: [
-      {
-        path: '/about',
-        element: <About />,
-      },
+      // {
+      //   path: '/about',
+      //   element: <About />,
+      // },
       {
         path: '/project',
         element: <Project />,
@@ -76,24 +117,6 @@ export const router = createBrowserRouter([
       //   path: '/project-details',
       //   element: <ProjectDetails />,
       // },
-      {
-        path: '/project-details/:path',
-        element: <ProjectDetails />,
-        loader: async ({ params }) => {
-          // console.log('params', params.path);
-          const path = params.path;
-          if (!path) {
-            throw redirect('/');
-          }
-          const project = allProjects.find(
-            (project) => project._meta.path === path,
-          );
-          if (!project) {
-            throw redirect('/');
-          }
-          return project;
-        },
-      },
       {
         path: '/become-volounteer',
         element: <BecomeVolounteer />,
@@ -109,10 +132,6 @@ export const router = createBrowserRouter([
       {
         path: '/event',
         element: <Event />,
-      },
-      {
-        path: '/gallery',
-        element: <GalleryPage />,
       },
       {
         path: '/event-details',

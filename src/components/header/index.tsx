@@ -54,7 +54,7 @@ const Header = ({ className, logo }: { className?: string; logo?: string }) => {
                       width={80}
                       height={80}
                       className='rounded-circle'
-                      style={{ mixBlendMode: 'multiply' }}
+                      // style={{ mixBlendMode: 'multiply' }}
                     />
                   </Link>
                   <Link to='/' className='header-logo-2'>

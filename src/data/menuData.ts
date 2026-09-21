@@ -58,63 +58,66 @@ export const menuData: MenuItem[] = [
     label: 'About Us',
     path: '/about',
   },
-  { label: 'Event', path: '/event' },
+  // { label: 'Event', path: '/event' },
   { label: 'Gallery', path: '/gallery' },
-  {
-    label: 'Pages',
-    path: '/news-details',
-    hasDropdown: true,
-    submenu: [
-      {
-        label: 'Cause',
-        path: '/project-details',
-        submenu: [
-          { label: 'Our Cause', path: '/project' },
-          { label: 'Cause Details', path: '/project-details' },
-        ],
-      },
-      {
-        label: 'volounteer',
-        path: '/volounteer-details',
-        submenu: [
-          { label: 'Become Volounteer', path: '/become-volounteer' },
-          { label: 'Volounteer', path: '/volounteer' },
-          { label: 'Volounteer Details', path: '/volounteer-details' },
-        ],
-      },
-      {
-        label: 'Event',
-        path: '/event-details',
-        submenu: [
-          { label: 'Our Event', path: '/event' },
-          { label: 'Event List', path: '/event-list' },
-          { label: 'Event Details', path: '/event-details' },
-        ],
-      },
-      {
-        label: 'Donation',
-        path: '/donation-details',
-        submenu: [
-          { label: 'Our Donation', path: '/donation' },
-          { label: 'Donation Now', path: '/donation-now' },
-          { label: 'Donation Details', path: '/donation-details' },
-        ],
-      },
-      { label: 'Our Pricing', path: '/pricing' },
-      { label: 'Our Faq', path: '/faq' },
-      { label: '404 Page', path: '/404' },
-    ],
-  },
-  {
-    label: 'Blog',
-    path: '/news-details',
-    hasDropdown: true,
-    submenu: [
-      { label: 'Blog Grid', path: '/news-grid' },
-      { label: 'Blog Standard', path: '/news' },
-      { label: 'Blog Details', path: '/news-details' },
-    ],
-  },
+  { label: 'Vision & Mission', path: '/vision-and-mission' },
+  { label: 'Awards', path: '/awards' },
+  { label: 'Services', path: '/services' },
+  // {
+  //   label: 'Pages',
+  //   path: '/news-details',
+  //   hasDropdown: true,
+  //   submenu: [
+  //     {
+  //       label: 'Cause',
+  //       path: '/project-details',
+  //       submenu: [
+  //         { label: 'Our Cause', path: '/project' },
+  //         { label: 'Cause Details', path: '/project-details' },
+  //       ],
+  //     },
+  //     {
+  //       label: 'volounteer',
+  //       path: '/volounteer-details',
+  //       submenu: [
+  //         { label: 'Become Volounteer', path: '/become-volounteer' },
+  //         { label: 'Volounteer', path: '/volounteer' },
+  //         { label: 'Volounteer Details', path: '/volounteer-details' },
+  //       ],
+  //     },
+  //     {
+  //       label: 'Event',
+  //       path: '/event-details',
+  //       submenu: [
+  //         { label: 'Our Event', path: '/event' },
+  //         { label: 'Event List', path: '/event-list' },
+  //         { label: 'Event Details', path: '/event-details' },
+  //       ],
+  //     },
+  //     {
+  //       label: 'Donation',
+  //       path: '/donation-details',
+  //       submenu: [
+  //         { label: 'Our Donation', path: '/donation' },
+  //         { label: 'Donation Now', path: '/donation-now' },
+  //         { label: 'Donation Details', path: '/donation-details' },
+  //       ],
+  //     },
+  //     { label: 'Our Pricing', path: '/pricing' },
+  //     { label: 'Our Faq', path: '/faq' },
+  //     { label: '404 Page', path: '/404' },
+  //   ],
+  // },
+  // {
+  //   label: 'Blog',
+  //   path: '/news-details',
+  //   hasDropdown: true,
+  //   submenu: [
+  //     { label: 'Blog Grid', path: '/news-grid' },
+  //     { label: 'Blog Standard', path: '/news' },
+  //     { label: 'Blog Details', path: '/news-details' },
+  //   ],
+  // },
   {
     label: 'Contact Us',
     path: '/contact',
