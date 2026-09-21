@@ -1,6 +1,6 @@
 import '@/assets/css/additional.css';
-import '@/assets/css/all.min.css';
 import '@/assets/css/animate.css';
+import '@/assets/css/extra-styles.css';
 import '@/assets/scss/main.scss';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { RouterProvider } from 'react-router-dom';

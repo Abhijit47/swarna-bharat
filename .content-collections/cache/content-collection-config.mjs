@@ -1,9 +1,44 @@
 // content-collections.ts
-import { defineCollection, defineConfig } from "@content-collections/core";
+import {
+  defineCollection,
+  defineConfig,
+  defineSingleton
+} from "@content-collections/core";
 import { compileMDX } from "@content-collections/mdx";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import { z } from "zod";
+var aboutUs = defineSingleton({
+  name: "aboutUs",
+  filePath: "src/contents/about-us.mdx",
+  parser: "frontmatter",
+  schema: z.object({
+    title: z.string().min(5, "Title must be at least 5 characters").max(100, "Title must be less than 100 characters"),
+    slug: z.string(),
+    summary: z.string().min(10, "Summary must be at least 10 characters").max(160, "Summary must be less than 160 characters"),
+    tags: z.array(z.string()),
+    content: z.string(),
+    draft: z.boolean().default(false)
+  }),
+  transform: async (document, context) => {
+    if (document.draft) {
+      return context.skip("document is a draft");
+    }
+    const mdx = await compileMDX(context, document, {
+      remarkPlugins: [remarkGfm],
+      rehypePlugins: [rehypeSlug]
+    });
+    const readTime = Math.ceil(mdx.split(" ").length / 150);
+    return {
+      ...document,
+      mdx,
+      readTime
+    };
+  },
+  onSuccess: () => {
+    console.log("About Us singleton loaded successfully");
+  }
+});
 var projectSchema = z.object({
   title: z.string().min(5, "Title must be at least 5 characters").max(100, "Title must be less than 100 characters"),
   slug: z.string(),
@@ -75,7 +110,7 @@ var posts = defineCollection({
   }
 });
 var content_collections_default = defineConfig({
-  content: [posts, projects]
+  content: [posts, projects, aboutUs]
 });
 export {
   content_collections_default as default

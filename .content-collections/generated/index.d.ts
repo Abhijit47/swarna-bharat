@@ -7,4 +7,7 @@ export declare const allPosts: Array<Post>;
 export type Project = GetTypeByName<typeof configuration, "projects">;
 export declare const allProjects: Array<Project>;
 
+export type AboutUs = GetTypeByName<typeof configuration, "aboutUs">;
+export declare const aboutUs: AboutUs;
+
 export {};

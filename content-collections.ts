@@ -1,19 +1,53 @@
-import { defineCollection, defineConfig } from '@content-collections/core';
+import {
+  defineCollection,
+  defineConfig,
+  defineSingleton,
+} from '@content-collections/core';
 import { compileMDX } from '@content-collections/mdx';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import { z } from 'zod';
 
-// const siteConfig = defineSingleton({
-//   name: 'siteConfig',
-//   filePath: 'src/contents/site.yaml',
-//   parser: 'yaml',
-//   optional: true,
-//   schema: z.object({
-//     title: z.string(),
-//     description: z.string(),
-//   }),
-// });
+const aboutUs = defineSingleton({
+  name: 'aboutUs',
+  filePath: 'src/contents/about-us.mdx',
+  parser: 'frontmatter',
+  schema: z.object({
+    title: z
+      .string()
+      .min(5, 'Title must be at least 5 characters')
+      .max(100, 'Title must be less than 100 characters'),
+    slug: z.string(),
+    summary: z
+      .string()
+      .min(10, 'Summary must be at least 10 characters')
+      .max(160, 'Summary must be less than 160 characters'),
+    tags: z.array(z.string()),
+    content: z.string(),
+    draft: z.boolean().default(false),
+  }),
+  transform: async (document, context) => {
+    if (document.draft) {
+      return context.skip('document is a draft');
+    }
+
+    const mdx = await compileMDX(context, document, {
+      remarkPlugins: [remarkGfm],
+      rehypePlugins: [rehypeSlug],
+    });
+
+    const readTime = Math.ceil(mdx.split(' ').length / 150); // Assuming an average reading speed of 200 words per minute
+
+    return {
+      ...document,
+      mdx,
+      readTime,
+    };
+  },
+  onSuccess: () => {
+    console.log('About Us singleton loaded successfully');
+  },
+});
 
 const projectSchema = z.object({
   title: z
@@ -104,5 +138,5 @@ const posts = defineCollection({
 });
 
 export default defineConfig({
-  content: [posts, projects],
+  content: [posts, projects, aboutUs],
 });

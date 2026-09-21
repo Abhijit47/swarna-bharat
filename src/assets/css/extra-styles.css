@@ -1,0 +1,19 @@
+// inside content-body margin bottom set 1.5rem but not the last child margin bottom set to 0
+
+/* .content-body {
+  background: royalblue !important;
+} */
+
+#about-me {
+  /* background: royalblue !important; */
+  /* padding: 2rem 1rem; */
+  /* border-radius: 0.5rem; */
+  max-width: 100%;
+  width: 100%;
+}
+
+#content-body {
+  & > *:not(:last-child) {
+    margin-bottom: 1.5rem !important;
+  }
+}
