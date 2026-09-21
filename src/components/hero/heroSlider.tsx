@@ -6,13 +6,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 import 'swiper/css/effect-flip';
 import 'swiper/css/navigation';
-import {
-  A11y,
-  Autoplay,
-  EffectFade,
-  EffectFlip,
-  Navigation,
-} from 'swiper/modules';
+import { A11y, Autoplay, EffectFade, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const slides = [
@@ -45,41 +39,41 @@ const slides = [
   },
 ];
 
-const isDev = import.meta.env.DEV;
+// const isDev = import.meta.env.DEV;
 
 const HeroSlider = () => {
   const tripleitems = [...slides, ...slides, ...slides];
 
   return (
     <section className='hero-section-1'>
-      <div className='arrow-button'>
+      {/* <div className='arrow-button'>
         <button className='array-prev' title='left'>
           <i className='fa-light fa-chevron-left' />
         </button>
         <button className='array-next' title='right'>
           <i className='fa-light fa-chevron-right' />
         </button>
-      </div>
+      </div> */}
       <Swiper
-        navigation={{
-          nextEl: '.array-next',
-          prevEl: '.array-prev',
-        }}
-        loop
+        // navigation={{
+        //   nextEl: '.array-next',
+        //   prevEl: '.array-prev',
+        // }}
+        loop={false}
         freeMode
         rewind
         grabCursor
-        effect='flip'
-        speed={3000}
-        autoplay={
-          isDev
-            ? undefined
-            : {
-                delay: 3000,
-                disableOnInteraction: false,
-              }
-        }
-        modules={[Navigation, EffectFade, Autoplay, A11y, EffectFlip]}
+        effect='fade'
+        // speed={3000}
+        // autoplay={
+        //   isDev
+        //     ? undefined
+        //     : {
+        //         delay: 3000,
+        //         disableOnInteraction: false,
+        //       }
+        // }
+        modules={[EffectFade, A11y]}
         className='hero-slider'>
         {tripleitems.map((slide, idx) => (
           <SwiperSlide key={idx}>
