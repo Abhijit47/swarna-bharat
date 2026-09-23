@@ -77,16 +77,22 @@ var projects = defineCollection({
     console.log("Projects collection loaded successfully");
   }
 });
+var postSchema = z.object({
+  title: z.string().min(5, "Title must be at least 5 characters").max(100, "Title must be less than 100 characters"),
+  slug: z.string(),
+  cover: z.string(),
+  summary: z.string().min(10, "Summary must be at least 10 characters").max(160, "Summary must be less than 160 characters"),
+  tags: z.array(z.string()),
+  keywords: z.array(z.string()),
+  author: z.string(),
+  content: z.string(),
+  draft: z.boolean().default(false)
+});
 var posts = defineCollection({
   name: "posts",
   directory: "src/contents/posts",
   include: ["**/*.md", "**/*.mdx"],
-  schema: z.object({
-    title: z.string(),
-    summary: z.string(),
-    content: z.string(),
-    draft: z.boolean().default(false)
-  }),
+  schema: postSchema,
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document, {
       remarkPlugins: [remarkGfm],

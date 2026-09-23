@@ -9,7 +9,7 @@ import ProjectsSlider from '@/components/projects/projectsSlider';
 import ServicesOne from '@/components/services/servicesOne';
 // import Teams from '@/components/teams';
 import TestimonialOne from '@/components/testimonial/testimonialOne';
-import { newsDataOne } from '@/data/nwesData';
+// import { newsDataOne } from '@/data/nwesData';
 
 const Home = () => {
   return (
@@ -23,7 +23,11 @@ const Home = () => {
       <TestimonialOne />
       <CounterOne />
       <FaqList />
-      <NewsOne data={newsDataOne} isPaginationShow={false} className='pt-0' />
+      <NewsOne
+        // data={newsDataOne}
+        isPaginationShow={false}
+        className='pt-0'
+      />
       <ContactInfoOne />
     </>
   );

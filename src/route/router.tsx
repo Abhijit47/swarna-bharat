@@ -1,3 +1,4 @@
+import { loadAPost, loadAProject, loadPosts } from '@/data/data-loaders';
 import InnerLayout from '@/layout/innerLayout';
 import LayoutThree from '@/layout/layoutThree';
 import LayoutTwo from '@/layout/layoutTwo';
@@ -6,6 +7,7 @@ import Error from '@/pages/404';
 import About from '@/pages/about';
 import AwardsPage from '@/pages/awards';
 import BecomeVolounteer from '@/pages/become-volounteer';
+import BlogDetails from '@/pages/blog-details';
 import Contact from '@/pages/contact';
 import Donation from '@/pages/donation';
 import DonationDetails from '@/pages/donation-details';
@@ -28,8 +30,7 @@ import ServicesPage from '@/pages/services';
 import VisionAndMissionPage from '@/pages/vision-and-mission';
 import Volounteer from '@/pages/volounteer';
 import VolounteerDetails from '@/pages/volounteer-details';
-import { allProjects } from 'content-collections';
-import { createBrowserRouter, redirect } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,7 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+        loader: loadPosts,
       },
       {
         path: '/about',
@@ -52,20 +54,7 @@ export const router = createBrowserRouter([
       {
         path: '/project-details/:path',
         element: <ProjectDetails />,
-        loader: async ({ params }) => {
-          // console.log('params', params.path);
-          const path = params.path;
-          if (!path) {
-            throw redirect('/');
-          }
-          const project = allProjects.find(
-            (project) => project._meta.path === path,
-          );
-          if (!project) {
-            throw redirect('/');
-          }
-          return project;
-        },
+        loader: loadAProject,
       },
       {
         path: '/vision-and-mission',
@@ -78,6 +67,11 @@ export const router = createBrowserRouter([
       {
         path: '/services',
         element: <ServicesPage />,
+      },
+      {
+        path: '/blogs/:path',
+        element: <BlogDetails />,
+        loader: loadAPost,
       },
     ],
   },
