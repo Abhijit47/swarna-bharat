@@ -2,10 +2,25 @@ import useOnScreen from '@/hooks/useOnScreen';
 import { useEffect, useRef, useState } from 'react';
 
 const counterData = [
-  { value: 35, suffix: 'k', label: 'Team Suppor', style: 'style-2' },
-  { value: 1, suffix: 'k+', label: 'Successful Camaigns', style: '' },
-  { value: 15, suffix: 'k+', label: 'Incredible Volunteers', style: '' },
-  { value: 400, suffix: '+', label: 'Monthly Donor', style: 'style-2' },
+  {
+    value: 2012,
+    // suffix: '',
+    label: 'Foundation Established',
+    style: 'style-2',
+  },
+  { value: 3, suffix: 'k+', label: 'Saplings Planted', style: '' },
+  {
+    value: 1000,
+    suffix: 'k+',
+    label: 'Water Bowls for Birds & Animals',
+    style: '',
+  },
+  {
+    value: 13,
+    suffix: '+',
+    label: 'Dedicated Social Service',
+    style: 'style-2',
+  },
 ];
 
 const CounterOne = () => {
@@ -59,15 +74,20 @@ const CounterOne = () => {
             <div className='col-lg-6'>
               <div className='counter-content'>
                 <div className='section-title mb-0'>
-                  <span className='sub-title wow fadeInUp'>Numbers</span>
-                  <h2 className='sec-title'>
-                    <span>W</span>e Always Help The <br /> Needy People
+                  <span className='sub-title wow fadeInUp'>
+                    Our Impact at a Glance
+                  </span>
+                  <h2 className='sec-title text-capitalize'>
+                    {/* <span>W</span>e Always Help The <br /> Needy People */}
+                    Every Contribution Can Create a Lasting Impact
                   </h2>
                 </div>
                 <p className='text wow fadeInUp' data-delay='.3s'>
-                  Charity helps to reduce suffering but also fosters a sense of
-                  unity and shared responsibility in differences in someone's
-                  life.
+                  For more than a decade,{' '}
+                  <strong>Swarna Bharat Foundation</strong> has worked with
+                  communities to support people in need, empower women and
+                  youth, protect the environment, and promote health and social
+                  well-being.
                 </p>
                 <div className='counter-main-item' ref={counterRef}>
                   <div className='counter-item wow fadeInUp' data-delay='.5s'>
