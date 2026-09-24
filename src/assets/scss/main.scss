@@ -43,6 +43,33 @@ Version: 1.0.0
 
 --------------------------------------------------------------
 */
+@use './_mixins' as *;
+@use './_variables.scss' as *;
+@use './_buttons' as *;
+@use './_typography' as *;
+@use './about' as *;
+@use './_animation' as *;
+@use './_brand' as *;
+@use './_contact' as *;
+@use './_cta' as *;
+@use './_donation' as *;
+@use './_event' as *;
+@use './_faq' as *;
+@use './_feature' as *;
+@use './_footer' as *;
+@use './_header' as *;
+@use './_helping' as *;
+@use './_hero' as *;
+@use './_marquee' as *;
+@use './_meanmenu' as *;
+@use './_news' as *;
+@use './_preloader' as *;
+@use './_pricing' as *;
+@use './_project' as *;
+@use './_section' as *;
+@use './_service' as *;
+@use './_team' as *;
+@use './_testimonial' as *;
 
 // Import Boostrap
 @import 'bootstrap/dist/css/bootstrap.min.css';
@@ -50,66 +77,66 @@ Version: 1.0.0
 //>> Basic Start <<//
 
 //>> Mixins <<//
-@import '_mixins';
+// @import '_mixins';
 
 //>> Variables <<//
-@import '_variables';
+// @import '_variables';
 
 //>> Buttons <<//
-@import '_buttons';
+// @import '_buttons';
 //>> Typography <<//
-@import '_typography';
+// @import '_typography';
 //>> Basic End <<//
 
 //>> Template Section Style Start <<//
 
 //>> About <<//
-@import '_about';
+// @import '_about';
 //>> Animation <<//
-@import '_animation';
+// @import '_animation';
 //>> Brand <<//
-@import '_brand';
+// @import '_brand';
 //>> Contact <<//
-@import '_contact';
+// @import '_contact';
 //>> Cta <<//
-@import '_cta';
+// @import '_cta';
 //>> Donation <<//
-@import '_donation';
+// @import '_donation';
 //>> Event <<//
-@import '_event';
+// @import '_event';
 //>> Faq <<//
-@import '_faq';
+// @import '_faq';
 //>> Feature <<//
-@import '_feature';
+// @import '_feature';
 //>> Footer <<//
-@import '_footer';
+// @import '_footer';
 //>> Header <<//
-@import '_header';
+// @import '_header';
 //>> Helping <<//
-@import '_helping';
+// @import '_helping';
 //>> Hero <<//
-@import '_hero';
+// @import '_hero';
 //>> Marquee <<//
-@import '_marquee';
+// @import '_marquee';
 //>> MeanMenu <<//
-@import '_meanmenu';
+// @import '_meanmenu';
 //>> News <<//
-@import '_news';
+// @import '_news';
 //>> _Preloader <<//
-@import '_preloader';
+// @import '_preloader';
 //>> _Pricing <<//
-@import '_pricing';
+// @import '_pricing';
 //>> Preloader <<//
 //>> _Project <<//
-@import '_project';
+// @import '_project';
 //>> Section <<//
-@import '_section';
+// @import '_section';
 //>> Service <<//
-@import '_service';
+// @import '_service';
 //>> Team <<//
-@import '_team';
+// @import '_team';
 //>> Testimonial <<//
-@import '_testimonial';
+// @import '_testimonial';
 
 //>> Template Section Style End <<//
 
