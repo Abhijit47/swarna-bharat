@@ -1,5 +1,23 @@
 import z from 'zod';
 
+export const collectionSchema = z.object({
+  title: z
+    .string()
+    .min(5, 'Title must be at least 5 characters')
+    .max(100, 'Title must be less than 100 characters'),
+  slug: z.string(),
+  cover: z.string(),
+  summary: z
+    .string()
+    .min(10, 'Summary must be at least 10 characters')
+    .max(160, 'Summary must be less than 160 characters'),
+  tags: z.array(z.string()),
+  keywords: z.array(z.string()),
+  author: z.string(),
+  content: z.string(),
+  draft: z.boolean().default(false),
+});
+
 export const projectSchema = z.object({
   title: z
     .string()
@@ -16,3 +34,40 @@ export const projectSchema = z.object({
 });
 
 export type Project = z.infer<typeof projectSchema>;
+
+export const postSchema = z.object({
+  title: z
+    .string()
+    .min(5, 'Title must be at least 5 characters')
+    .max(100, 'Title must be less than 100 characters'),
+  slug: z.string(),
+  cover: z.string(),
+  summary: z
+    .string()
+    .min(10, 'Summary must be at least 10 characters')
+    .max(160, 'Summary must be less than 160 characters'),
+  tags: z.array(z.string()),
+  keywords: z.array(z.string()),
+  author: z.string(),
+  content: z.string(),
+  draft: z.boolean().default(false),
+});
+
+export type Post = z.infer<typeof postSchema>;
+
+export const singletonSchema = z.object({
+  title: z
+    .string()
+    .min(5, 'Title must be at least 5 characters')
+    .max(100, 'Title must be less than 100 characters'),
+  slug: z.string(),
+  summary: z
+    .string()
+    .min(10, 'Summary must be at least 10 characters')
+    .max(160, 'Summary must be less than 160 characters'),
+  tags: z.array(z.string()),
+  content: z.string(),
+  draft: z.boolean().default(false),
+});
+
+export type SingletonData = z.infer<typeof singletonSchema>;

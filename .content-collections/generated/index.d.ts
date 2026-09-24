@@ -10,4 +10,10 @@ export declare const allProjects: Array<Project>;
 export type AboutUs = GetTypeByName<typeof configuration, "aboutUs">;
 export declare const aboutUs: AboutUs;
 
+export type Award = GetTypeByName<typeof configuration, "award">;
+export declare const award: Award;
+
+export type Service = GetTypeByName<typeof configuration, "service">;
+export declare const service: Service;
+
 export {};
