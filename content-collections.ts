@@ -10,22 +10,6 @@ import { compileMDX } from '@content-collections/mdx';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import { collectionSchema, singletonSchema } from './src/lib/schemas';
-// import { z } from 'zod';
-
-// const singletonSchema = z.object({
-//   title: z
-//     .string()
-//     .min(5, 'Title must be at least 5 characters')
-//     .max(100, 'Title must be less than 100 characters'),
-//   slug: z.string(),
-//   summary: z
-//     .string()
-//     .min(10, 'Summary must be at least 10 characters')
-//     .max(160, 'Summary must be less than 160 characters'),
-//   tags: z.array(z.string()),
-//   content: z.string(),
-//   draft: z.boolean().default(false),
-// });
 
 async function singletonTransformer(
   document: Schema<'frontmatter', typeof singletonSchema>,
@@ -109,21 +93,6 @@ const service = defineSingleton({
   },
 });
 
-// const projectSchema = z.object({
-//   title: z
-//     .string()
-//     .min(5, 'Title must be at least 5 characters')
-//     .max(100, 'Title must be less than 100 characters'),
-//   slug: z.string(),
-//   summary: z
-//     .string()
-//     .min(10, 'Summary must be at least 10 characters')
-//     .max(160, 'Summary must be less than 160 characters'),
-//   tags: z.array(z.string()),
-//   content: z.string(),
-//   draft: z.boolean().default(false),
-// });
-
 const projects = defineCollection({
   name: 'projects',
   directory: 'src/contents/projects',
@@ -134,24 +103,6 @@ const projects = defineCollection({
     console.log('Projects collection loaded successfully');
   },
 });
-
-// const postSchema = z.object({
-//   title: z
-//     .string()
-//     .min(5, 'Title must be at least 5 characters')
-//     .max(100, 'Title must be less than 100 characters'),
-//   slug: z.string(),
-//   cover: z.string(),
-//   summary: z
-//     .string()
-//     .min(10, 'Summary must be at least 10 characters')
-//     .max(160, 'Summary must be less than 160 characters'),
-//   tags: z.array(z.string()),
-//   keywords: z.array(z.string()),
-//   author: z.string(),
-//   content: z.string(),
-//   draft: z.boolean().default(false),
-// });
 
 const posts = defineCollection({
   name: 'posts',

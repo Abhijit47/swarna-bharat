@@ -75,7 +75,7 @@ const AboutOne = () => {
                 <div className='about-image'>
                   <motion.img
                     // src='/img/home-1/about/about-3.jpg'
-                    src='/imgs/WhatsApp Image 2026-09-10 at 12.55.41 PM.jpeg'
+                    src='/about-us.jpeg'
                     alt='img'
                     className='wow img-custom-anim-right'
                     initial={{
