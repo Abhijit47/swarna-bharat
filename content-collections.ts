@@ -9,6 +9,7 @@ import {
 import { compileMDX } from '@content-collections/mdx';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
+
 import { collectionSchema, singletonSchema } from './src/lib/schemas';
 
 async function singletonTransformer(
@@ -93,6 +94,17 @@ const service = defineSingleton({
   },
 });
 
+const visionAndMission = defineSingleton({
+  name: 'visionAndMission',
+  filePath: 'src/contents/vision-and-mission.mdx',
+  parser: 'frontmatter',
+  schema: singletonSchema,
+  transform: singletonTransformer,
+  onSuccess: () => {
+    console.log('Vision and Mission singleton loaded successfully');
+  },
+});
+
 const projects = defineCollection({
   name: 'projects',
   directory: 'src/contents/projects',
@@ -116,5 +128,5 @@ const posts = defineCollection({
 });
 
 export default defineConfig({
-  content: [posts, projects, aboutUs, award, service],
+  content: [posts, projects, aboutUs, award, service, visionAndMission],
 });

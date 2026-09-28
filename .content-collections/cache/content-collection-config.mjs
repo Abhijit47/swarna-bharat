@@ -113,6 +113,16 @@ var service = defineSingleton({
     console.log("Service singleton loaded successfully");
   }
 });
+var visionAndMission = defineSingleton({
+  name: "visionAndMission",
+  filePath: "src/contents/vision-and-mission.mdx",
+  parser: "frontmatter",
+  schema: singletonSchema,
+  transform: singletonTransformer,
+  onSuccess: () => {
+    console.log("Vision and Mission singleton loaded successfully");
+  }
+});
 var projects = defineCollection({
   name: "projects",
   directory: "src/contents/projects",
@@ -134,7 +144,7 @@ var posts = defineCollection({
   }
 });
 var content_collections_default = defineConfig({
-  content: [posts, projects, aboutUs, award, service]
+  content: [posts, projects, aboutUs, award, service, visionAndMission]
 });
 export {
   content_collections_default as default

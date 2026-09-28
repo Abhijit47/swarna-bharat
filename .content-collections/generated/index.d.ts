@@ -16,4 +16,7 @@ export declare const award: Award;
 export type Service = GetTypeByName<typeof configuration, "service">;
 export declare const service: Service;
 
+export type VisionAndMission = GetTypeByName<typeof configuration, "visionAndMission">;
+export declare const visionAndMission: VisionAndMission;
+
 export {};
