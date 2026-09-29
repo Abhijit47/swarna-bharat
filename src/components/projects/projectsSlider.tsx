@@ -17,21 +17,21 @@ const projectSlides = [
     contentClass: '',
   },
   {
-    image: '/gallery/03.png',
+    image: '/gallery/Pi3.jpg',
     title: 'Child Educations',
     subtitle: 'Charity & Funding',
     shape: '/img/home-1/project/shape.png',
     contentClass: '',
   },
   {
-    image: '/gallery/04.png',
+    image: '/gallery/Pi4.jpg',
     title: 'Child Educations',
     subtitle: 'Charity & Funding',
     shape: '/img/home-1/project/shape.png',
     contentClass: '',
   },
   {
-    image: '/gallery/05.png',
+    image: '/gallery/Pi5.jpg',
     title: 'Child Educations',
     subtitle: 'Charity & Funding',
     shape: '/img/home-1/project/shape.png',
@@ -166,7 +166,7 @@ const ProjectsSlider = () => {
                 >
                   <img
                     src={slide.image}
-                    alt='img'
+                    alt={`${slide.image}-${idx}`}
                     // width={'100%'}
                     // height={'100%'}
                     // className='object-fit-cover'
@@ -203,7 +203,7 @@ const ProjectsSlider = () => {
                 >
                   <img
                     src={slide.image}
-                    alt='img'
+                    alt={`${slide.image}-${idx}`}
                     // width={'100%'}
                     // height={'100%'}
                     // className='object-fit-cover'
