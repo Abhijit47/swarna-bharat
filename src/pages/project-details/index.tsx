@@ -1,8 +1,11 @@
 import PageHeader from '@/components/pageHeader';
 // import { allProjects } from 'content-collections';
+import SEO_TAGS from '@/components/seo';
 import { useLoaderData } from 'react-router-dom';
 import ProjectDetailsPost from './projectDetailsPost';
 // import ProjectDetailsSideber from "./projectDetailsSideber";
+
+const baseUrl = import.meta.env.VITE_APP_BASE_URL;
 
 const ProjectDetails = () => {
   // const { pathname } = useLocation();
@@ -44,6 +47,17 @@ const ProjectDetails = () => {
 
   return (
     <>
+      <SEO_TAGS
+        title={`${data.title} | Swarna Bharat Foundation`}
+        description={data.summary}
+        canonical={`${baseUrl}/`}
+        schemaMarkup={{
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'Swarna Bharat',
+          url: `${baseUrl}/`,
+        }}
+      />
       <PageHeader currentPage={data.title} title={data.title} />
       <section className='causes-details-section section-padding fix'>
         <div className='container'>

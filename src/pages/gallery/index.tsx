@@ -13,7 +13,10 @@ import lgVideo from 'lightgallery/plugins/video';
 import lgZoom from 'lightgallery/plugins/zoom';
 
 import PageHeader from '@/components/pageHeader';
+import SEO_TAGS from '@/components/seo';
 import { useEffect } from 'react';
+
+const baseUrl = import.meta.env.VITE_APP_BASE_URL;
 
 const images = [
   {
@@ -358,6 +361,18 @@ export default function GalleryPage() {
 
   return (
     <>
+      <SEO_TAGS
+        title='Gallery | Swarna Bharat Foundation'
+        description='Welcome to Swarna Bharat, building a brighter future through community-driven initiatives and sustainable development.'
+        canonical={`${baseUrl}/`}
+        schemaMarkup={{
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'Swarna Bharat',
+          url: `${baseUrl}/`,
+        }}
+      />
+
       <PageHeader currentPage='Gallery' title='Gallery' />
 
       <section className='event-section-4 section-padding fix'>

@@ -1,10 +1,24 @@
 import PageHeader from '@/components/pageHeader';
+import SEO_TAGS from '@/components/seo';
 import { MDXContent } from '@content-collections/mdx/react';
 import { award } from 'content-collections';
+
+const baseUrl = import.meta.env.VITE_APP_BASE_URL;
 
 export default function AwardsPage() {
   return (
     <>
+      <SEO_TAGS
+        title='Awards | Swarna Bharat Foundation'
+        description='Welcome to Swarna Bharat, building a brighter future through community-driven initiatives and sustainable development.'
+        canonical={`${baseUrl}/`}
+        schemaMarkup={{
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'Swarna Bharat',
+          url: `${baseUrl}/`,
+        }}
+      />
       <PageHeader currentPage='Awards' title='Awards' />
       <div className={'container my-5'}>
         <div className={'row'}>

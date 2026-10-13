@@ -1,15 +1,29 @@
 // import NewsCommentDisplay from '@/components/news/newsCommentDisplay';
 // import NewsCommentForm from '@/components/news/newsCommentForm';
 import PageHeader from '@/components/pageHeader';
+import SEO_TAGS from '@/components/seo';
 import { loadPosts, type loadAPost } from '@/data/data-loaders';
 import { MDXContent } from '@content-collections/mdx/react';
 import { Link, useLoaderData } from 'react-router-dom';
+
+const baseUrl = import.meta.env.VITE_APP_BASE_URL;
 
 export default function BlogDetails() {
   const post = useLoaderData<typeof loadAPost>();
 
   return (
     <>
+      <SEO_TAGS
+        title={`${post.title} | Swarna Bharat Foundation`}
+        description={post.summary}
+        canonical={`${baseUrl}/`}
+        schemaMarkup={{
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'Swarna Bharat',
+          url: `${baseUrl}/`,
+        }}
+      />
       <PageHeader currentPage={post.title} title={post.title} />
       <section className='news-details-section section-padding fix'>
         <div className='container'>

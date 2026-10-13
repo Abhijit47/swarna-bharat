@@ -2,6 +2,7 @@
 import FaqList from '@/components/faqList';
 import PageHeader from '@/components/pageHeader';
 // import Teams from "@/components/teams";
+import SEO_TAGS from '@/components/seo';
 import TestimonialOne from '@/components/testimonial/testimonialOne';
 import { MDXContent } from '@content-collections/mdx/react';
 import { aboutUs } from 'content-collections';
@@ -9,9 +10,22 @@ import { motion } from 'motion/react';
 
 import '@/assets/css/extra-styles.css';
 
+const baseUrl = import.meta.env.VITE_APP_BASE_URL;
+
 const About = () => {
   return (
     <>
+      <SEO_TAGS
+        title='About Us | Swarna Bharat Foundation'
+        description='Welcome to Swarna Bharat, building a brighter future through community-driven initiatives and sustainable development.'
+        canonical={`${baseUrl}/`}
+        schemaMarkup={{
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'Swarna Bharat',
+          url: `${baseUrl}/`,
+        }}
+      />
       <PageHeader currentPage={'About Us'} title={'About Us'} />
       {/* <AboutTwo className='pb-0' /> */}
       {/* <Teams /> */}
