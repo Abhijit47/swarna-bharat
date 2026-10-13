@@ -1,8 +1,8 @@
 import contentCollections from '@content-collections/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import { defineConfig, loadEnv, type PluginOption } from 'vite';
-import Visualize from 'vite-bundle-visualizer';
+import { defineConfig, loadEnv } from 'vite';
+// import Visualize from 'vite-bundle-visualizer';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import Sitemap from 'vite-plugin-sitemap';
@@ -90,9 +90,9 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       contentCollections(),
-      Visualize({
-        open: false,
-      }) as PluginOption,
+      // Visualize({
+      //   open: false,
+      // }) as PluginOption,
       ViteImageOptimizer({
         /* pass your config */
         logStats: true,

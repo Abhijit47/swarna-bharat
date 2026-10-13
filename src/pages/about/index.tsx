@@ -26,7 +26,11 @@ const About = () => {
           url: `${baseUrl}/`,
         }}
       />
-      <PageHeader currentPage={'About Us'} title={'About Us'} />
+      <PageHeader
+        currentPage={'About Us'}
+        title={'About Us'}
+        imgSrc='/about.png'
+      />
       {/* <AboutTwo className='pb-0' /> */}
       {/* <Teams /> */}
 

@@ -373,7 +373,7 @@ export default function GalleryPage() {
         }}
       />
 
-      <PageHeader currentPage='Gallery' title='Gallery' />
+      <PageHeader currentPage='Gallery' title='Gallery' imgSrc='/gallery.png' />
 
       <section className='event-section-4 section-padding fix'>
         <div className='container px-2'>

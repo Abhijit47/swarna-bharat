@@ -24,7 +24,11 @@ export default function BlogDetails() {
           url: `${baseUrl}/`,
         }}
       />
-      <PageHeader currentPage={post.title} title={post.title} />
+      <PageHeader
+        currentPage={post.title}
+        title={post.title}
+        imgSrc={post.cover}
+      />
       <section className='news-details-section section-padding fix'>
         <div className='container'>
           <div className='news-details-wrapper'>
@@ -32,10 +36,7 @@ export default function BlogDetails() {
               <div className='col-lg-8 col-12'>
                 <div className='news-details-post'>
                   <div className='news-details-image'>
-                    <img
-                      src='/img/inner-page/news-details/details-1.jpg'
-                      alt='img'
-                    />
+                    <img src={post.cover} alt={post.summary} />
                   </div>
                   <div className='news-details-content'>
                     <MDXContent code={post.mdx} />

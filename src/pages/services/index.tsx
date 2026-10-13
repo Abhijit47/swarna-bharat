@@ -19,7 +19,11 @@ export default function ServicesPage() {
           url: `${baseUrl}/`,
         }}
       />
-      <PageHeader currentPage='Services' title='Services' />
+      <PageHeader
+        currentPage='Services'
+        title='Services'
+        imgSrc='/services.png'
+      />
 
       <div className={'container my-5'}>
         <div className={'row'}>

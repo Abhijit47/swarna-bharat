@@ -19,7 +19,11 @@ export default function VisionAndMissionPage() {
           url: `${baseUrl}/`,
         }}
       />
-      <PageHeader currentPage='Vision & Mission' title='Vision & Mission' />
+      <PageHeader
+        currentPage='Vision & Mission'
+        title='Vision & Mission'
+        imgSrc='/vision-mission.png'
+      />
 
       <div className={'container my-5'}>
         <div className={'row'}>

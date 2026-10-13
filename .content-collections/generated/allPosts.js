@@ -3,7 +3,7 @@ export default [
   {
     "title": "Koti Vriksha Mission | Growing a Greener Bengaluru",
     "slug": "koti-vriksha-mission-greener-bengaluru",
-    "cover": "/img/home-1/news/08.jpg",
+    "cover": "/blogs/koti_vriksha_mission_banner_856x402.png",
     "summary": "Learn how tree plantation, sapling maintenance, and community participation can contribute to a greener, healthier, and more sustainable Bengaluru.",
     "tags": [
       "Koti Vriksha Mission",
@@ -42,7 +42,7 @@ export default [
     "next": {
       "title": "Supporting Urban Biodiversity | Building a Greener Bengaluru",
       "slug": "supporting-urban-biodiversity-bengaluru",
-      "cover": "/img/home-1/news/08.jpg",
+      "cover": "/blogs/supporting_urban_biodiversity_856x402.png",
       "summary": "Discover how trees, plants, water sources, and community action can support birds, insects, and urban wildlife while helping create a greener Bengaluru.",
       "tags": [
         "Urban Biodiversity",
@@ -87,7 +87,7 @@ export default [
   {
     "title": "Supporting Urban Biodiversity | Building a Greener Bengaluru",
     "slug": "supporting-urban-biodiversity-bengaluru",
-    "cover": "/img/home-1/news/08.jpg",
+    "cover": "/blogs/supporting_urban_biodiversity_856x402.png",
     "summary": "Discover how trees, plants, water sources, and community action can support birds, insects, and urban wildlife while helping create a greener Bengaluru.",
     "tags": [
       "Urban Biodiversity",
@@ -130,7 +130,7 @@ export default [
     "prev": {
       "title": "Koti Vriksha Mission | Growing a Greener Bengaluru",
       "slug": "koti-vriksha-mission-greener-bengaluru",
-      "cover": "/img/home-1/news/08.jpg",
+      "cover": "/blogs/koti_vriksha_mission_banner_856x402.png",
       "summary": "Learn how tree plantation, sapling maintenance, and community participation can contribute to a greener, healthier, and more sustainable Bengaluru.",
       "tags": [
         "Koti Vriksha Mission",
@@ -168,7 +168,7 @@ export default [
     "next": {
       "title": "Water for Voiceless | Helping Birds & Animals in Bengaluru",
       "slug": "water_for_voiceless_a_simple_step_that_saves_lives",
-      "cover": "/img/home-1/news/08.jpg",
+      "cover": "/blogs/water_for_voiceless_856x402.png",
       "summary": "Learn how providing clean drinking water can support birds, stray animals, and other voiceless creatures during India's hot summer months.",
       "tags": [
         "Water for Voiceless",
@@ -206,7 +206,7 @@ export default [
   {
     "title": "Water for Voiceless | Helping Birds & Animals in Bengaluru",
     "slug": "water_for_voiceless_a_simple_step_that_saves_lives",
-    "cover": "/img/home-1/news/08.jpg",
+    "cover": "/blogs/water_for_voiceless_856x402.png",
     "summary": "Learn how providing clean drinking water can support birds, stray animals, and other voiceless creatures during India's hot summer months.",
     "tags": [
       "Water for Voiceless",
@@ -242,7 +242,7 @@ export default [
     "prev": {
       "title": "Supporting Urban Biodiversity | Building a Greener Bengaluru",
       "slug": "supporting-urban-biodiversity-bengaluru",
-      "cover": "/img/home-1/news/08.jpg",
+      "cover": "/blogs/supporting_urban_biodiversity_856x402.png",
       "summary": "Discover how trees, plants, water sources, and community action can support birds, insects, and urban wildlife while helping create a greener Bengaluru.",
       "tags": [
         "Urban Biodiversity",

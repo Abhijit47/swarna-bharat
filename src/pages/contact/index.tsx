@@ -18,7 +18,11 @@ const Contact = () => {
           url: `${baseUrl}/`,
         }}
       />
-      <PageHeader currentPage='Contact Us' title='Contact Us' />
+      <PageHeader
+        currentPage='Contact Us'
+        title='Contact Us'
+        imgSrc='/contact.png'
+      />
       <ContactFormTwo />
     </>
   );

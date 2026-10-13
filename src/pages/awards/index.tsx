@@ -19,7 +19,7 @@ export default function AwardsPage() {
           url: `${baseUrl}/`,
         }}
       />
-      <PageHeader currentPage='Awards' title='Awards' />
+      <PageHeader currentPage='Awards' title='Awards' imgSrc='/awards.png' />
       <div className={'container my-5'}>
         <div className={'row'}>
           <div className={'col-lg-10'} style={{ margin: '0 auto' }}>

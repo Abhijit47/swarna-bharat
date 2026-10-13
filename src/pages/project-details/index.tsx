@@ -58,7 +58,11 @@ const ProjectDetails = () => {
           url: `${baseUrl}/`,
         }}
       />
-      <PageHeader currentPage={data.title} title={data.title} />
+      <PageHeader
+        currentPage={data.title}
+        title={data.title}
+        imgSrc='/about.png'
+      />
       <section className='causes-details-section section-padding fix'>
         <div className='container'>
           <div className='causes-details-wrapper'>
