@@ -3,7 +3,7 @@ export default [
   {
     "title": "Awards & Recognitions: Honouring Excellence Since 2012",
     "slug": "awards-and-recognitions-honouring-excellence",
-    "cover": "/img/home-1/news/08.jpg",
+    "cover": "/projects/Awards-Recognitions-Ceremony.png",
     "summary": "A national recognition platform by Swarna Bharat Foundation that has honoured 10,000+ achievers across diverse professional and social fields in India.",
     "tags": [
       "Awards",
@@ -33,7 +33,7 @@ export default [
     "next": {
       "title": "Project Care: Healing with Compassion",
       "slug": "project-care-healing-with-compassion",
-      "cover": "/img/home-1/news/08.jpg",
+      "cover": "/projects/care-healing.png",
       "summary": "A healthcare initiative by Swarna Bharat Foundation providing free health camps and medical assistance to senior citizens, orphanages, and poor families.",
       "tags": [
         "Healthcare",
@@ -64,7 +64,7 @@ export default [
   {
     "title": "Project Care: Healing with Compassion",
     "slug": "project-care-healing-with-compassion",
-    "cover": "/img/home-1/news/08.jpg",
+    "cover": "/projects/care-healing.png",
     "summary": "A healthcare initiative by Swarna Bharat Foundation providing free health camps and medical assistance to senior citizens, orphanages, and poor families.",
     "tags": [
       "Healthcare",
@@ -93,7 +93,7 @@ export default [
     "prev": {
       "title": "Awards & Recognitions: Honouring Excellence Since 2012",
       "slug": "awards-and-recognitions-honouring-excellence",
-      "cover": "/img/home-1/news/08.jpg",
+      "cover": "/projects/Awards-Recognitions-Ceremony.png",
       "summary": "A national recognition platform by Swarna Bharat Foundation that has honoured 10,000+ achievers across diverse professional and social fields in India.",
       "tags": [
         "Awards",
@@ -122,7 +122,7 @@ export default [
     "next": {
       "title": "Project Green Bengaluru: Plant Today, Protect Tomorrow",
       "slug": "project-green-bengaluru-plant-today-protect-tomorrow",
-      "cover": "/img/home-1/news/08.jpg",
+      "cover": "/projects/green_bengaluru.png",
       "summary": "An environmental conservation initiative under the Koti Vriksha Mission, partnering with BBMP to plant and maintain over 3 lakh saplings across Bengaluru.",
       "tags": [
         "Environment",
@@ -153,7 +153,7 @@ export default [
   {
     "title": "Project Green Bengaluru: Plant Today, Protect Tomorrow",
     "slug": "project-green-bengaluru-plant-today-protect-tomorrow",
-    "cover": "/img/home-1/news/08.jpg",
+    "cover": "/projects/green_bengaluru.png",
     "summary": "An environmental conservation initiative under the Koti Vriksha Mission, partnering with BBMP to plant and maintain over 3 lakh saplings across Bengaluru.",
     "tags": [
       "Environment",
@@ -182,7 +182,7 @@ export default [
     "prev": {
       "title": "Project Care: Healing with Compassion",
       "slug": "project-care-healing-with-compassion",
-      "cover": "/img/home-1/news/08.jpg",
+      "cover": "/projects/care-healing.png",
       "summary": "A healthcare initiative by Swarna Bharat Foundation providing free health camps and medical assistance to senior citizens, orphanages, and poor families.",
       "tags": [
         "Healthcare",
@@ -211,7 +211,7 @@ export default [
     "next": {
       "title": "Project Hope: Fulfilling Dreams, Supporting Life",
       "slug": "project-hope-fulfilling-dreams-supporting-life",
-      "cover": "/img/home-1/news/08.jpg",
+      "cover": "/projects/project_hope.png",
       "summary": "An initiative by Swarna Bharat Foundation providing medical, educational, and emotional support to children affected by Cancer and HIV/AIDS.",
       "tags": [
         "Humanitarian",
@@ -242,7 +242,7 @@ export default [
   {
     "title": "Project Hope: Fulfilling Dreams, Supporting Life",
     "slug": "project-hope-fulfilling-dreams-supporting-life",
-    "cover": "/img/home-1/news/08.jpg",
+    "cover": "/projects/project_hope.png",
     "summary": "An initiative by Swarna Bharat Foundation providing medical, educational, and emotional support to children affected by Cancer and HIV/AIDS.",
     "tags": [
       "Humanitarian",
@@ -271,7 +271,7 @@ export default [
     "prev": {
       "title": "Project Green Bengaluru: Plant Today, Protect Tomorrow",
       "slug": "project-green-bengaluru-plant-today-protect-tomorrow",
-      "cover": "/img/home-1/news/08.jpg",
+      "cover": "/projects/green_bengaluru.png",
       "summary": "An environmental conservation initiative under the Koti Vriksha Mission, partnering with BBMP to plant and maintain over 3 lakh saplings across Bengaluru.",
       "tags": [
         "Environment",
@@ -300,7 +300,7 @@ export default [
     "next": {
       "title": "Project Jeeva Jala: Water for the Voiceless",
       "slug": "project-jeeva-jala-water-for-the-voiceless",
-      "cover": "/img/home-1/news/08.jpg",
+      "cover": "/projects/jeeva_jala.png",
       "summary": "An animal welfare and environmental initiative by Swarna Bharat Foundation providing safe summer drinking water points for stray animals and birds.",
       "tags": [
         "Animal Welfare",
@@ -331,7 +331,7 @@ export default [
   {
     "title": "Project Jeeva Jala: Water for the Voiceless",
     "slug": "project-jeeva-jala-water-for-the-voiceless",
-    "cover": "/img/home-1/news/08.jpg",
+    "cover": "/projects/jeeva_jala.png",
     "summary": "An animal welfare and environmental initiative by Swarna Bharat Foundation providing safe summer drinking water points for stray animals and birds.",
     "tags": [
       "Animal Welfare",
@@ -360,7 +360,7 @@ export default [
     "prev": {
       "title": "Project Hope: Fulfilling Dreams, Supporting Life",
       "slug": "project-hope-fulfilling-dreams-supporting-life",
-      "cover": "/img/home-1/news/08.jpg",
+      "cover": "/projects/project_hope.png",
       "summary": "An initiative by Swarna Bharat Foundation providing medical, educational, and emotional support to children affected by Cancer and HIV/AIDS.",
       "tags": [
         "Humanitarian",
@@ -389,7 +389,7 @@ export default [
     "next": {
       "title": "Project Shakti: Empower Her, Empower India",
       "slug": "project-shakti-empower-her-empower-india",
-      "cover": "/img/home-1/news/08.jpg",
+      "cover": "/projects/Project-Shakti.png",
       "summary": "A women empowerment initiative by Swarna Bharat Foundation focused on leadership, financial literacy, skill development, and health awareness.",
       "tags": [
         "Women Empowerment",
@@ -420,7 +420,7 @@ export default [
   {
     "title": "Project Shakti: Empower Her, Empower India",
     "slug": "project-shakti-empower-her-empower-india",
-    "cover": "/img/home-1/news/08.jpg",
+    "cover": "/projects/Project-Shakti.png",
     "summary": "A women empowerment initiative by Swarna Bharat Foundation focused on leadership, financial literacy, skill development, and health awareness.",
     "tags": [
       "Women Empowerment",
@@ -449,7 +449,7 @@ export default [
     "prev": {
       "title": "Project Jeeva Jala: Water for the Voiceless",
       "slug": "project-jeeva-jala-water-for-the-voiceless",
-      "cover": "/img/home-1/news/08.jpg",
+      "cover": "/projects/jeeva_jala.png",
       "summary": "An animal welfare and environmental initiative by Swarna Bharat Foundation providing safe summer drinking water points for stray animals and birds.",
       "tags": [
         "Animal Welfare",

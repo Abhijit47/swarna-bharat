@@ -1,5 +1,5 @@
 // import CommentArea from "./commentArea";
-
+import type { Project } from 'content-collections';
 import { useLoaderData } from 'react-router-dom';
 
 import { MDXContent } from '@content-collections/mdx/react';
@@ -32,14 +32,7 @@ const ProjectDetailsPost = () => {
   //   );
   // }
 
-  const data = useLoaderData<{
-    mdx: string;
-    readTime: number;
-    title: string;
-    summary: string;
-    content: string;
-    draft: boolean;
-  }>();
+  const data = useLoaderData<Project>();
 
   // console.log('ProjectDetailsPost data:::', data.title);
 
@@ -47,7 +40,7 @@ const ProjectDetailsPost = () => {
     <>
       <div className='causes-details-post'>
         <div className='details-image'>
-          <img src='/img/inner-page/project-details/details-1.jpg' alt='img' />
+          <img src={data.cover} alt={data.summary} />
         </div>
 
         <div className='details-content'>

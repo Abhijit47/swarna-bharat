@@ -1,6 +1,6 @@
 import PageHeader from '@/components/pageHeader';
-// import { allProjects } from 'content-collections';
 import SEO_TAGS from '@/components/seo';
+import type { Project } from 'content-collections';
 import { useLoaderData } from 'react-router-dom';
 import ProjectDetailsPost from './projectDetailsPost';
 // import ProjectDetailsSideber from "./projectDetailsSideber";
@@ -36,14 +36,7 @@ const ProjectDetails = () => {
   //   );
   // }
 
-  const data = useLoaderData<{
-    mdx: string;
-    readTime: number;
-    title: string;
-    summary: string;
-    content: string;
-    draft: boolean;
-  }>();
+  const data = useLoaderData<Project>();
 
   return (
     <>
@@ -61,7 +54,7 @@ const ProjectDetails = () => {
       <PageHeader
         currentPage={data.title}
         title={data.title}
-        imgSrc='/about.png'
+        imgSrc={data.cover}
       />
       <section className='causes-details-section section-padding fix'>
         <div className='container'>

@@ -2,7 +2,7 @@ import { allProjects } from 'content-collections';
 import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // eslint-disable-next-line
@@ -76,10 +76,10 @@ const ServicesOne = () => {
                   disableOnInteraction: false,
                 }
           }
-          pagination={{
-            el: '.dot',
-            clickable: true,
-          }}
+          // pagination={{
+          //   el: '.dot',
+          //   clickable: true,
+          // }}
           rewind={true}
           grabCursor={true}
           breakpoints={{
@@ -99,7 +99,7 @@ const ServicesOne = () => {
               slidesPerView: 1,
             },
           }}
-          modules={[Pagination, Autoplay]}
+          modules={[Autoplay]}
           className='service-slider'>
           {/* {serviceSlides.map((slide, idx) => (
             <SwiperSlide key={idx}>
@@ -130,11 +130,11 @@ const ServicesOne = () => {
                   <h3>
                     <Link to={`/project-details/${project._meta.path}`}>
                       {project.title.length > 20
-                        ? project.title.trim().substring(0, 20) + '...'
+                        ? project.title.trim().substring(0, 16) + '...'
                         : project.title.trim()}
                     </Link>
                   </h3>
-                  <p>{project.summary}</p>
+                  <p>{project.summary.substring(0, 100)}...</p>
                   <Link
                     to={`/project-details/${project._meta.path}`}
                     className='theme-btn'>
@@ -145,9 +145,9 @@ const ServicesOne = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className='swiper-dot'>
+        {/* <div className='swiper-dot'>
           <div className='dot' />
-        </div>
+        </div> */}
       </div>
     </section>
   );

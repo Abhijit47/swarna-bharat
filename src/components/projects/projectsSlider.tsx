@@ -153,7 +153,7 @@ const projectSlides = [
 
 const ProjectsSlider = () => {
   return (
-    <section className='project-section fix'>
+    <section className='project-section fix section-padding pb-0'>
       <div className='container'>
         <div className='section-title text-center'>
           <span className='sub-title wow fadeInUp'>Complete Project</span>

@@ -5,7 +5,7 @@ import MobileMenu from './mobile-menu';
 // import SearchPopup from './search-popup';
 
 const Header = ({ className, logo }: { className?: string; logo?: string }) => {
-  const [isSearchActive, setIsSearchActive] = useState(false);
+  // const [isSearchActive, setIsSearchActive] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isStickyHeader, setIsStickyHeader] = useState(false);
   const pathName = useLocation().pathname;
@@ -141,7 +141,7 @@ const Header = ({ className, logo }: { className?: string; logo?: string }) => {
                 </div>
               </div>
               <div className='header-right d-flex justify-content-end align-items-center'>
-                <Link
+                {/* <Link
                   to='#'
                   onClick={(e) => {
                     e.preventDefault();
@@ -149,7 +149,7 @@ const Header = ({ className, logo }: { className?: string; logo?: string }) => {
                   }}
                   className='main-header__search search-toggler'>
                   <i className='fa-regular fa-magnifying-glass' />
-                </Link>
+                </Link> */}
                 <div className='header-button'>
                   <Link to='/donation-details' className='theme-btn'>
                     Donate Now <i className='fa-solid fa-arrow-right' />
