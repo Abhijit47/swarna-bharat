@@ -124,7 +124,7 @@ const ServicesOne = () => {
             <SwiperSlide key={project._meta.path}>
               <div className='causes-box-item'>
                 <div className='icon'>
-                  {/* <img src={slide.icon} alt='img' /> */}
+                  <img src={project.icon} alt='img' />
                 </div>
                 <div className='content'>
                   <h3>

@@ -19,6 +19,7 @@ var collectionSchema = z.object({
   keywords: z.array(z.string()),
   author: z.string(),
   content: z.string(),
+  icon: z.string().optional(),
   draft: z.boolean().default(false)
 });
 var projectSchema = z.object({
