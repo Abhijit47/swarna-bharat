@@ -22,7 +22,7 @@ const RootLayout = () => {
         accountName='Swarna Bharat Foundation'
         statusMessage='Typically replies within 1 hour'
         placeholder='Type a message..'
-        chatMessage='Hello there! 🤝 \nHow can we help?'
+        chatMessage='Hello there! 🤝 How can we help?'
         notification={!import.meta.env.DEV}
         allowEsc
         allowClickAway
