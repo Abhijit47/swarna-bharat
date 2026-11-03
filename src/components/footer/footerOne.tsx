@@ -1,30 +1,51 @@
 import { Link } from 'react-router-dom';
-const quickLinks = [
-  { name: 'About US', path: '/about' },
-  { name: 'Contact', path: '/contact' },
-  { name: 'Gallery', path: '/contact' },
-  { name: 'FAQ', path: '/faq' },
-  { name: 'Blog', path: '/news-details' },
-];
 
-const exploreNow = [
-  { name: 'Volounteer', path: '/volounteer-details' },
-  { name: 'Project', path: '/project-details' },
-  { name: 'Event', path: '/event-details' },
-  { name: 'Causes', path: '/project-details' },
-];
+// const quickLinks = [
+//   { name: 'About US', path: '/about' },
+//   { name: 'Contact', path: '/contact' },
+//   { name: 'Gallery', path: '/contact' },
+//   { name: 'FAQ', path: '/faq' },
+//   { name: 'Blog', path: '/news-details' },
+// ];
 
-const supports = [
-  { name: 'Domination', path: '/donation-details' },
-  { name: 'Forums', path: '/news' },
-  { name: 'FAQ', path: '/faq' },
-  { name: 'Support Policy', path: '/contact' },
-];
+// const exploreNow = [
+//   { name: 'Volounteer', path: '/volounteer-details' },
+//   { name: 'Project', path: '/project-details' },
+//   { name: 'Event', path: '/event-details' },
+//   { name: 'Causes', path: '/project-details' },
+// ];
+
+// const supports = [
+//   { name: 'Domination', path: '/donation-details' },
+//   { name: 'Forums', path: '/news' },
+//   { name: 'FAQ', path: '/faq' },
+//   { name: 'Support Policy', path: '/contact' },
+// ];
+
 const FooterOne = () => {
   return (
     <footer className='footer-section header-bg fix'>
       <div className='container'>
-        <div className='footer-widget-wrapper'>
+        <div className='footer-bottom'>
+          <div className='footer-wrapper'>
+            <p>
+              Copyright &amp; Design By <span>@Swarna Bharat Foundation</span>
+            </p>
+            <ul className='footer-bottom-list'>
+              <li>
+                <Link to='/about'>About</Link>
+              </li>
+              <li>
+                <Link to='/awards'>Awards</Link>
+              </li>
+              <li>
+                <Link to='/vision-and-mission'>Vision & Mission</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* <div className='footer-widget-wrapper pt-0'>
           <div className='row g-4 justify-content-between'>
             <div
               className='col-xl-2 col-md-6 col-lg-2 wow fadeInUp'
@@ -80,7 +101,7 @@ const FooterOne = () => {
                 </ul>
               </div>
             </div>
-            {/* <div
+            <div
               className='col-xl-5 col-md-6 col-lg-5 ps-lg-5 wow fadeInUp'
               data-delay='.8s'>
               <div className='single-footer-widget'>
@@ -121,7 +142,7 @@ const FooterOne = () => {
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
         <div className='footer-bottom'>
@@ -131,17 +152,17 @@ const FooterOne = () => {
             </p>
             <ul className='footer-bottom-list'>
               <li>
-                <Link to='/faq'>Faq</Link>
+                <Link to='/about'>About</Link>
               </li>
               <li>
-                <Link to='/contact'>Careers</Link>
+                <Link to='/awards'>Awards</Link>
               </li>
               <li>
-                <Link to='/contact'>Contact</Link>
+                <Link to='/vision-and-mission'>Vision & Mission</Link>
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
