@@ -1,7 +1,7 @@
 import AnimationProvider from '@/components/animationProvider';
 import FooterOne from '@/components/footer/footerOne';
 import Header from '@/components/header';
-import TopHeader from '@/components/header/topHeader';
+// import TopHeader from '@/components/header/topHeader';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import { Outlet, ScrollRestoration } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ const RootLayout = () => {
   return (
     <>
       <AnimationProvider>
-        <TopHeader />
+        {/* <TopHeader /> */}
         <Header />
         <Outlet />
         <FooterOne />

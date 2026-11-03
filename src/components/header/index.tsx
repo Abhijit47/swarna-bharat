@@ -150,11 +150,11 @@ const Header = ({ className, logo }: { className?: string; logo?: string }) => {
                   className='main-header__search search-toggler'>
                   <i className='fa-regular fa-magnifying-glass' />
                 </Link> */}
-                <div className='header-button'>
+                {/* <div className='header-button'>
                   <Link to='/donation-details' className='theme-btn'>
                     Donate Now <i className='fa-solid fa-arrow-right' />
                   </Link>
-                </div>
+                </div> */}
                 <div className='header__hamburger d-xl-none my-auto'>
                   <div
                     onClick={() => setIsMobileMenuOpen(true)}
