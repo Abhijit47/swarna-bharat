@@ -42,11 +42,11 @@ const MobileMenu = ({
                     </button>
                   </div>
                 </div>
-                <p className='text d-none d-xl-block'>
+                {/* <p className='text d-none d-xl-block'>
                   Nullam dignissim, ante scelerisque the is euismod fermentum
                   odio sem semper the is erat, a feugiat leo urna eget eros.
                   Duis Aenean a imperdiet risus.
-                </p>
+                </p> */}
                 <div className='mobile-menu fix mb-3 mean-container'>
                   <div className='mean-bar d-xl-none'>
                     <div className='mean-nav'>
@@ -163,7 +163,7 @@ const MobileMenu = ({
                       </div>
                       <div className='offcanvas__contact-text'>
                         <Link target='_blank' to='#'>
-                          Main Street, Melbourne, Australia
+                          Bengaluru, Karnataka, India
                         </Link>
                       </div>
                     </li>
@@ -172,9 +172,12 @@ const MobileMenu = ({
                         <i className='fal fa-envelope' />
                       </div>
                       <div className='offcanvas__contact-text'>
-                        <Link to='mailto:info@example.com'>
+                        <Link
+                          to='mailto:info.swarnabharat@gmail.com'
+                          target='_blank'
+                          rel='noopener noreferrer'>
                           <span className='mailto:info@example.com'>
-                            info@example.com
+                            info.swarnabharat@gmail.com
                           </span>
                         </Link>
                       </div>
@@ -194,7 +197,12 @@ const MobileMenu = ({
                         <i className='far fa-phone' />
                       </div>
                       <div className='offcanvas__contact-text'>
-                        <Link to='tel:+11002345909'>+11002345909</Link>
+                        <Link
+                          to='tel:+919845732329'
+                          target='_blank'
+                          rel='noopener noreferrer'>
+                          +91 9845732329
+                        </Link>
                       </div>
                     </li>
                   </ul>

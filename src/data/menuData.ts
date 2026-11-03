@@ -18,41 +18,45 @@ export type MenuItem = {
   submenu?: MenuSubItem[];
 };
 export const menuData: MenuItem[] = [
+  // {
+  //   label: 'Home',
+  //   path: '/',
+  //   hasDropdown: true,
+  //   thumbMenu: [
+  //     {
+  //       img: '/img/header/home-1.jpg',
+  //       title: 'Home Page 01',
+  //       btnPath: '/',
+  //     },
+  //     {
+  //       img: '/img/header/home-2.jpg',
+  //       title: 'Home Page 02',
+  //       btnPath: '/home-2',
+  //     },
+  //     {
+  //       img: '/img/header/home-3.jpg',
+  //       title: 'Home Page 03',
+  //       btnPath: '/home-3',
+  //     },
+  //   ],
+  //   submenu: [
+  //     {
+  //       label: 'Home 01',
+  //       path: '/',
+  //     },
+  //     {
+  //       label: 'Home 02',
+  //       path: '/home-2',
+  //     },
+  //     {
+  //       label: 'Home 03',
+  //       path: '/home-3',
+  //     },
+  //   ],
+  // },
   {
     label: 'Home',
     path: '/',
-    hasDropdown: true,
-    thumbMenu: [
-      {
-        img: '/img/header/home-1.jpg',
-        title: 'Home Page 01',
-        btnPath: '/',
-      },
-      {
-        img: '/img/header/home-2.jpg',
-        title: 'Home Page 02',
-        btnPath: '/home-2',
-      },
-      {
-        img: '/img/header/home-3.jpg',
-        title: 'Home Page 03',
-        btnPath: '/home-3',
-      },
-    ],
-    submenu: [
-      {
-        label: 'Home 01',
-        path: '/',
-      },
-      {
-        label: 'Home 02',
-        path: '/home-2',
-      },
-      {
-        label: 'Home 03',
-        path: '/home-3',
-      },
-    ],
   },
   {
     label: 'About Us',
