@@ -152,7 +152,7 @@
   position: fixed;
   display: inline-block;
   z-index: 9999;
-  right: 30px;
+  left: 30px;
   bottom: 30px;
   @include transition;
   opacity: 0;
